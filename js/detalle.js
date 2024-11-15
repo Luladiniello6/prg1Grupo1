@@ -1,22 +1,21 @@
-function displayRecipeDetail() {
-    const recipeDetailSection = document.querySelector("#recipe-detail");
-    
-    if (window.opener && window.opener.selectedRecipe) {
-      const recipe = window.opener.selectedRecipe;
-      
-      recipeDetailSection.innerHTML = `
-        <img src="${recipe.thumbnail}" alt="${recipe.title}">
-        <h2>${recipe.title}</h2>
-        <p><strong>Dificultad:</strong> ${recipe.difficulty || "Desconocida"}</p>
-        <p><strong>Ingredientes:</strong> ${recipe.ingredients ? recipe.ingredients.join(", ") : "No disponible"}</p>
-        <p><strong>Instrucciones:</strong> ${recipe.instructions || "No disponible"}</p>
-      `;
-    } else {
-      recipeDetailSection.innerHTML = "<p>No se pudo cargar la receta.</p>";
-    }
-  }
+function mostrarDetalleReceta() {
+  const seccionDetalleReceta = document.querySelector("#detalle-receta");
   
-  // Llamar a la función al cargar la página
-  displayRecipeDetail();
+  if (window.opener && window.opener.recetaSeleccionada) {
+    const receta = window.opener.recetaSeleccionada;
+    
+    seccionDetalleReceta.innerHTML = `
+      <img src="${receta.thumbnail}" alt="${receta.title}">
+      <h2>${receta.title}</h2>
+      <p><strong>Dificultad:</strong> ${receta.difficulty || "Desconocida"}</p>
+      <p><strong>Ingredientes:</strong> ${receta.ingredients ? receta.ingredients.join(", ") : "No disponible"}</p>
+      <p><strong>Instrucciones:</strong> ${receta.instructions || "No disponible"}</p>`;
+  } else {
+    seccionDetalleReceta.innerHTML = "<p>No se pudo cargar la receta.</p>";
+  }
+}
+
+mostrarDetalleReceta();
+
   
   
