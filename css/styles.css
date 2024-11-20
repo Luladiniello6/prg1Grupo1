@@ -69,14 +69,12 @@ header {
 
 .detalle-receta h2 {
   text-align: center;
-  font-size: 1.8em;
   margin: 20px 0;
 }
 
 .detalle-receta p {
-  font-size: 1em;
   margin: 10px 20px;
-  line-height: 1.5;
+
   color: #333;
 }
 
