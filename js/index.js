@@ -33,7 +33,7 @@ function cargarMasRecetas() {
         <p>Dificultad: ${receta.difficulty || "Desconocida"}</p>
         <button onclick="verReceta(${i})">Ver detalles</button>
       </div>
-    `;
+      `;
   }
 
   listaRecetas.innerHTML += recetasHTML; 
