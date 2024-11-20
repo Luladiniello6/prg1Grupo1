@@ -8,12 +8,16 @@
 </head>
 <body>
     <header>
-        <img id="logo" src="./img/logo pagina recetas.jpg" alt="Logo del sitio">
         
-        <form id="searchform" action="">
-            <input type="text" placeholder="Buscar">
-            <button type="button" onclick="search()">Buscar</button>></button>
-        </form>        
+        <form class="formulario" action="search-results.html" method="GET" onsubmit="return validarFormulario(event)">
+            <div>
+                <label for="nombre"></label>
+                <input type="text" name="" value="">
+        </div>
+        <div>
+                <button type="submit">Enviar</button> 
+        </div>
+        </form>      
         
         <nav class="navegar">
                     <a href="./index.html">HOME</a>
@@ -23,10 +27,7 @@
         </nav>
     </header>
     <main>
-        <h1>(Titulo principal del sitio)</h1>
-
-        <p>FALTAN 10 Recetas</p>
-
+       
     </main>
 
     <footer>
