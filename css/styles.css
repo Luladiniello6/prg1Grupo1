@@ -44,11 +44,8 @@ header {
 
 .mas {
   display: block;
-  margin: 20px auto;
+  margin: 20px ;
   padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 5px;
@@ -86,5 +83,10 @@ header {
   }
 
   .logo{
-    width: 70%;
+    width: 150px;
+    box-sizing: border-box;
+    border-radius: 80px;
+    display: flex;
+    padding: 30px;
+    justify-content: left;
   }
