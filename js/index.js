@@ -1,51 +1,39 @@
-let recetas = []; 
-let recetasMostradas = 0; 
-const recetasPorPagina = 10; 
-let recetaSeleccionada = null; 
+fetch("https://dummyjson.com/recipes")
+  .then(function (response) {
+    return response.json(); 
+  })
+  .then(function (data) {
+    console.log(data);
+    let recetas = data.recipes;
+    let listaRecetas = document.querySelector(".lista-recetas"); 
+    let recetasMostradas = 0; 
+    const recetasPorPagina = 10;
 
-function obtenerRecetas() {
-  fetch("https://dummyjson.com/recipes")
-    .then(function(respuesta) {
-      return respuesta.json();
-    })
-    .then(function(datos) {
-      recetas = datos.recipes; 
-      cargarMasRecetas(); 
-    })
-    .catch(function(error) {
-      console.log("Error al obtener las recetas:", error);
-    });
-}
+    function cargarRecetas() {
+      let receta = "";
+      for (let i = recetasMostradas; i < recetasMostradas + recetasPorPagina; i++) {
+        if (i >= recetas.length) break;
 
-function cargarMasRecetas() {
-  const listaRecetas = document.querySelector("#lista-recetas");
-  
-  let recetasHTML = ""; 
-  const limite = recetasMostradas + recetasPorPagina; 
+        receta += `
+          <article class="cadaReceta">
+            <img src=${recetas[i].image} alt="Imagen de receta"></img>
+            <h1>${recetas[i].name}</h1>
+            <p>${recetas[i].difficulty}</p>
+            <a href="/recipes/${recetas[i].id}">Ver más</a>
+          </article>
+        `;
+      }
+      listaRecetas.innerHTML += receta;
+      recetasMostradas += recetasPorPagina;
 
-  for (let i = recetasMostradas; i < limite && i < recetas.length; i++) {
-    const receta = recetas[i];
-    
-    recetasHTML += `
-      <div class="tarjeta-receta">
-        <img src="${receta.thumbnail}" alt="${receta.title}">
-        <h2>${receta.title}</h2>
-        <p>Dificultad: ${receta.difficulty || "Desconocida"}</p>
-        <button onclick="verReceta(${i})">Ver detalles</button>
-      </div>
-    `;
-  }
-
-  listaRecetas.innerHTML += recetasHTML; 
-  recetasMostradas += recetasPorPagina; 
-}
-
-function verReceta(indice) {
-  recetaSeleccionada = recetas[indice]; 
-  window.location.href = "detalle.html"; 
-}
-
-document.querySelector("#cargar-mas").addEventListener("click", cargarMasRecetas);
-
-obtenerRecetas();
-
+      if (recetasMostradas >= recetas.length) {
+        botonCargarMas.style.display = "none";
+      }
+    }
+    let botonCargarMas = document.querySelector(".cargar-mas");
+    botonCargarMas.addEventListener("click", cargarRecetas);
+    cargarRecetas();
+  })
+  .catch(function (error) {
+    console.log("Error:", error);
+  });

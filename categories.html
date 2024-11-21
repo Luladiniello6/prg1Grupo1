@@ -8,7 +8,8 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="./prg1Grupo1/img/logo.jpg" alt="">
+        <h1>Recetas por Categorias</h1>
+        <img class="logo" src="./img/logo.jpg" alt="">
         <form action="./search-results.html" method="get">
             <input type="text" name="buscador" placeholder="Escribir aquí...">
             <button type="submit">Buscar</button>
@@ -30,6 +31,25 @@
             </ul>
         </nav>
     </header>
+
+    <main>
+        <div class="category">
+          <h2 id="facil">Fácil</h2>
+          <ul class="recipe-list"></ul>
+        </div>
+        <div class="category">
+          <h2 id="medium">Intermedio</h2>
+          <ul class="recipe-list"></ul>
+        </div>
+        <div class="category">
+          <h2 id="dificil" >Difícil</h2>
+          <ul class="recipe-list"></ul>
+        </div>
+
+        <section class="lista-recetas">
+        </section>
+      </main>
+
     <footer>
         <p>Alak Solana, Cañizares Agustin, Diniello Lourdes</p>
     </footer>
