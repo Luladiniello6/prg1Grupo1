@@ -46,7 +46,7 @@ body {
   .navegar li {
     list-style-type: none;
     margin: 0 10px; 
-    border: 1px solid black;
+    border: 1px solid rgb(242, 136, 136);
     background-color: rgba(239, 136, 136, 0.356);
     border-radius: 5px;
     padding: 20px;
@@ -79,10 +79,25 @@ body {
 .cadaReceta{
   border: 1px solid black;
   border-radius: 5px;
-  padding: 15px;
+  padding-bottom: 30px;
   width: 30%;
   text-align: center;
   margin: 10px;
+}
+
+.cadaReceta a{
+  text-decoration: none;
+  background-color: rgb(197, 61, 61);
+  padding: 5px;
+  border-radius: 5px;
+  color: antiquewhite;
+}
+
+.detalleHover:hover{
+  color: rgb(24, 23, 23);
+}
+.cadaReceta p{
+  padding: 10px;
 }
 
 .lista-recetas{
@@ -92,7 +107,7 @@ body {
   justify-content: space-between;
 }
 .cadaReceta img{
-  width: 80%;
+  width: 100%;
 }
 
 .buscar{
@@ -105,5 +120,19 @@ footer{
   padding: 20px;
   border-radius: 10px;
 
+}
+
+.cargar-mas{
+  display: flex;
+  background-color: rgb(163, 43, 43);
+  color: antiquewhite;
+  padding: 10px;
+  border-radius: 5px;
+  justify-content: center;
+  border-color: none;
+}
+
+.cargar-mas:hover{
+  color: black;
 }
 
