@@ -7,7 +7,10 @@ fetch("https://dummyjson.com/recipes")
     let recetas = data.recipes
     let receta = " "
     let listaRecetas = document.querySelector('.lista-recetas');
+    listaRecetas.style.distplay = "flex"
+    listaRecetas.style.flexWrap = "wrap" 
     
+
       for (let i = 0; i < recetas.length; i++) {
         receta += `
                   <article class="cadaReceta">
