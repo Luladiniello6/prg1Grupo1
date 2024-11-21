@@ -1,3 +1,4 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -11,82 +12,37 @@ header {
   padding: 30px 0;
 }
 
-.recetas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-}
-
-.tarjeta-receta {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 200px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.cadaReceta{
   flex-wrap: wrap;
 }
 
-.tarjeta-receta img {
-  width: 100%;
-  height: auto;
-}
-
-.tarjeta-receta h2 {
-  margin: 10px 0;
-}
-
-.tarjeta-receta p {
-  font-size: 0.9em;
-  color: #555;
-}
-
-.mas {
-  display: block;
-  margin: 20px ;
-  padding: 10px 20px;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-.mas:hover {
-  background-color: #45a049;
-}
-
-.detalle-receta img {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.detalle-receta h2 {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.detalle-receta p {
-  margin: 10px 20px;
-
-  color: #333;
+.cadaReceta img{
+  width: 30%;
 }
 
   
-  .navegar li {
-    list-style-type: none;
-  }
+.navegar li {
+  list-style-type: none;
+}
 
-  .navegar a {
-    text-decoration: none;
-  }
+.navegar a {
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
 
-  .logo{
-    width: 150px;
-    box-sizing: border-box;
-    border-radius: 80px;
-    display: flex;
-    padding: 30px;
-    justify-content: left;
-  }
+.navegar {
+  background-color: rgb(248, 167, 101);
+
+
+}
+
+.logo{
+  width: 150px;
+  box-sizing: border-box;
+  border-radius: 80px;
+  display: flex;
+  padding: 30px;
+  justify-content: left;
+}
