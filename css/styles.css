@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url();
+  
 }
 
 header {
@@ -21,20 +21,26 @@ header {
 }
 
   
-.navegar li {
+.navegar li{
   list-style-type: none;
+  display: flex;
 }
 
 .navegar a {
   text-decoration: none;
-  display: flex;
   flex-wrap: wrap;
+  color: black;
   
 }
 
-.navegar {
-  background-color: rgb(248, 167, 101);
+.navegar a:hover{
+  color: antiquewhite;
+}
 
+.navegar {
+  background-color: rgb(170, 32, 32);
+  display: flex;
+  
 
 }
 
@@ -45,4 +51,24 @@ header {
   display: flex;
   padding: 30px;
   justify-content: left;
+}
+
+.banner{
+  width: 100%;
+}
+
+.cadaReceta{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+
+}
+
+.lista-recetas{
+  flex-wrap: wrap;
+
+}
+
+article{
+ flex-wrap: wrap;
 }

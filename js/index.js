@@ -21,11 +21,9 @@ fetch("https://dummyjson.com/recipes")
       
       console.log(receta);
       listaRecetas.innerHTML = receta
-  })
-
-  .catch(function(error){
-    console.log("error;",error)
-  });
-
-  let re = document.querySelector(".cadaReceta");
-    re.style.flexWrap = "wrap";
+    })
+    
+    .catch(function(error){
+      console.log("error;",error)
+    });
+    
