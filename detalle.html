@@ -7,14 +7,40 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Detalle de la Receta</h1>
-    <a href="index.html" class="volver">Volver a la página principal</a>
+
+    <header>
+        <img class="logo" src="./prg1Grupo1/img/logo.jpg" alt="">     
+         <form action="./search-results.html" method="get">
+          <input type="text" name="buscador" placeholder="Escribir aquí...">
+          <button type="submit">Buscar</button>
+      </form>
+      <nav class="navegar">
+          <ul>
+              <li>
+                  <a href="./index.html">HOME</a>
+              </li>
+              <li>
+                  <a href="./categories.html">CATEGORIAS</a>
+              </li>
+              <li>
+                  <a href="./login.html">LOGIN</a>
+              </li>
+              <li>
+                  <a href="./register.html">REGISTRO</a>
+              </li>
+          </ul>
+      </nav>
   </header>
+
   
   <main>
-    <section id="detalle-receta" class="detalle-receta">
-    </section>
+    <div class="detalleReceta">
+        <h1 class="tituloReceta"></h1>
+        <img class="imagenReceta" alt="Imagen de la receta">
+        <p class="descripcionReceta"></p>
+        <p class="ingredientesReceta"></p>
+        <p class="instruccionesReceta"></p>
+      </div>
   </main>
   
 

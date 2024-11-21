@@ -1,93 +1,100 @@
+*{
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url(/img/backroundImage.webp);
-}
-
-header {
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-}
-
-.recetas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
-  justify-content: center;
-}
-
-.tarjeta-receta {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  overflow: hidden;
-  width: 200px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.tarjeta-receta img {
-  width: 100%;
-  height: auto;
-}
-
-.tarjeta-receta h2 {
-  font-size: 1.2em;
-  margin: 10px 0;
-}
-
-.tarjeta-receta p {
-  font-size: 0.9em;
-  color: #555;
-}
-
-.mas {
-  display: block;
-  margin: 20px auto;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-.mas:hover {
-  background-color: #45a049;
-}
-
-.detalle-receta img {
-  display: block;
-  margin: 20px auto;
-  max-width: 100%;
-  border-radius: 8px;
-}
-
-.detalle-receta h2 {
-  text-align: center;
-  font-size: 1.8em;
-  margin: 20px 0;
-}
-
-.detalle-receta p {
-  font-size: 1em;
-  margin: 10px 20px;
-  line-height: 1.5;
-  color: #333;
-}
-
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
+  
+  
+  header {
+    color: white;
+    text-align: center;
+  }
+  
+  .cadaReceta{
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  
+  .cadaReceta img{
+    width: 30%;
+  }
+  
+  
+  .navegar {
+    background-color: rgb(170, 32, 32);
+    display: flex;
+    margin-top: 0px;
+  }
+  
+  .navegar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    align-content: center;
+    margin-left: auto;
+    margin-right: 30px;
+    
+  }
   
   .navegar li {
     list-style-type: none;
+    margin: 0 10px; 
+    border: 1px solid black;
+    background-color: rgba(239, 136, 136, 0.356);
+    border-radius: 5px;
+    padding: 20px;
   }
-
+  
   .navegar a {
     text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 30px;
   }
+  
+.navegar a:hover {
+  color: antiquewhite;
+}
 
-  .logo{
-    width: 70%;
-  }
+.logo{
+  width: 150px;
+  box-sizing: border-box;
+  border-radius: 80px;
+  display: flex;
+  justify-content: left;
+  margin: 20px;
+}
+
+.banner{
+  width: 100%;
+}
+
+.cadaReceta{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  width: 30%;
+  text-align: center;
+  margin: 10px;
+}
+
+.lista-recetas{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.cadaReceta img{
+  width: 80%;
+}
+
+.buscar{
+  width: 50px;
+}

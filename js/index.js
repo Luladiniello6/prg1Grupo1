@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-fetch('https://dummyjson.com/recipes')
-
-function validarFormulario(event) {
-    const campoBusqueda = document.getElementById('busqueda');
-    const mensajeError = document.getElementById('error');
-
-    mensajeError.textContent = '';
-
-    if (campoBusqueda.value.trim() === '') {
-        mensajeError.textContent = 'El campo no puede estar vacío.';
-        return false;
-    }
-    if (campoBusqueda.value.trim().length < 3) {
-        mensajeError.textContent = 'La búsqueda debe tener al menos 3 caracteres.';
-        return false;
-    }
-    return true;
-=======
 let recetas = []; 
 let recetasMostradas = 0; 
 const recetasPorPagina = 10; 
@@ -68,4 +49,3 @@ document.querySelector("#cargar-mas").addEventListener("click", cargarMasRecetas
 
 obtenerRecetas();
 
->>>>>>> eda1bd61bf5a8abf71c319109316421e42488eb0

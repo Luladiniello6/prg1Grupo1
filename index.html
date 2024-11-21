@@ -3,13 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <title>Recetas de Casa - HOME</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-    <header></header>
+    <header>
+        <nav class="navegar">
+            <img class="logo" src="./img/logo.jpg" alt="">
+            <ul>
+                <li>
+                    <a href="./index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="./categories.html">CATEGORIAS</a>
+                </li>
+                <li>
+                    <a href="./login.html">LOGIN</a>
+                </li>
+                <li>
+                    <a href="./register.html">REGISTRO</a>
+                </li>
+            </ul>
+        </nav>
+
+        <form class="buscar" action="./search-results.html" method="get">
+            <input type="text" name="buscador" placeholder="Escribir aquí...">
+            <button type="submit">Buscar</button>
+        </form>
+    </header>
+    <img class="banner" src="./img/banner.nuevo.png">
+    
+    <main>
+        <section class="lista-recetas"></section>
+        <button id="cargar-mas" class="cargar-mas">Cargar más</button>
+    </main>
+   
+
     <footer>
-        <p>Integrantes: Alak Solana, Cañizares Agustin, Diniello Lourdes</p>
+            <p>Alak Solana, Cañizares Agustín, Diniello Lourdes</p>
     </footer>
 
         <script src="./js/index.js"></script>
