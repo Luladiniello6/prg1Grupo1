@@ -26,3 +26,6 @@ fetch("https://dummyjson.com/recipes")
   .catch(function(error){
     console.log("error;",error)
   });
+
+  let re = document.querySelector(".cadaReceta");
+    re.style.flexWrap = "wrap";
