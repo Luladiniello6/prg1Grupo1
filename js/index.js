@@ -28,6 +28,8 @@ fetch("https://dummyjson.com/recipes")
       listaRecetas.innerHTML += receta;
       recetasMostradas += recetasPorPagina;
 
+      cargarMenos.innerHTML
+
       if (recetasMostradas >= recetas.length) {
         botonCargarMas.style.display = "none";
       }

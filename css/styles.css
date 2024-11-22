@@ -46,7 +46,6 @@ body {
   .navegar li {
     list-style-type: none;
     margin: 0 10px; 
-    border: 1px solid rgb(242, 136, 136);
     background-color: rgba(239, 136, 136, 0.356);
     border-radius: 5px;
     padding: 20px;
@@ -77,12 +76,12 @@ body {
 }
 
 .cadaReceta{
-  border: 1px solid black;
   border-radius: 5px;
   padding-bottom: 30px;
   width: 30%;
   text-align: center;
   margin: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3)
 }
 
 .cadaReceta a{
@@ -134,5 +133,10 @@ footer{
 
 .cargar-mas:hover{
   color: black;
+}
+
+.buscar button{
+ width: 80px;
+
 }
 
