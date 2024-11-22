@@ -52,7 +52,7 @@ body{
     margin: 0 10px; 
     background-color: rgba(239, 136, 136, 0.356);
     border-radius: 5px;
-    padding: 20px;
+    padding: 10px;
   }
   
   .navegar a {
@@ -77,15 +77,17 @@ body{
 
 .banner{
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .cadaReceta{
-  border-radius: 5px;
+  border-radius: 10%;
   padding-bottom: 30px;
-  width: 30%;
+  width: 20%;
   text-align: center;
   margin: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3)
+
 }
 
 .cadaReceta a{
@@ -111,6 +113,7 @@ body{
 }
 .cadaReceta img{
   width: 100%;
+  border-radius: 50%;
 }
 
 .buscar{
