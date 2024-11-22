@@ -19,18 +19,16 @@ fetch("https://dummyjson.com/recipes")
       );
 
       let contenido = "";
-      recetasFiltradas.forEach(receta => {
-        contenido += `
-          <article class="cadaReceta">
-            <img src=${receta.image} alt="Imagen de receta"></img>
-            <h1>${receta.name}</h1>
-            <p>${receta.difficulty}</p>
-            <a href="/recipes/${receta.id}">Ver más</a>
-          </article>
-        `;
+        recetasFiltradas.forEach(receta => {
+            contenido += `
+            <article class="cadaReceta">
+                <img src=${receta.image} alt="Imagen de receta">
+                <h1>${receta.name}</h1>
+                <p>${receta.difficulty}</p>
+                <a href="/recipes/${receta.id}">Ver más</a>
+            </article>
+            `;
       });
-
-      // Mostrar recetas en el contenedor
       listaRecetas.innerHTML = contenido;
 
       if (recetasFiltradas.length === 0) {
@@ -38,7 +36,6 @@ fetch("https://dummyjson.com/recipes")
       }
     }
 
-    // Eventos para los botones
     btnFacil.addEventListener("click", function () {
       mostrarRecetasPorCategoria("easy");
     });
