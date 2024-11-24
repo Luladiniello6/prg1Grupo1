@@ -12,10 +12,10 @@ fetch('https://dummyjson.com/recipes/tags')
         return;
     }
 
-    let categorias = "";
+    let contenido = "";
     
         for (let i = 0; i <tags.length; i ++){
-            categorias +=`
+            contenido +=`
                 <article>
                     <img src= ${tags[i].image} alt=''>
                     <h1> <a href="./category.html?id=${tags[i].id}"> name: ${tags[i].name} </a> </h1>
@@ -24,7 +24,7 @@ fetch('https://dummyjson.com/recipes/tags')
             `
         }
         
-        listaRecetas.innerHTML = categorias
+        listaRecetas.innerHTML = contenido
     })
 .catch(function(error) {
     console.log("error: ", error);    
