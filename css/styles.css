@@ -221,3 +221,36 @@ input[type="email"], input[type="password"] {
   margin: 20px 0;
 }
 
+
+header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+main {
+  padding: 20px;
+}
+
+article {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 a {
+  text-decoration: none;
+  color: #333;
+}
+
+h2 a:hover {
+  text-decoration: underline;
+  color: #007BFF;
+}
