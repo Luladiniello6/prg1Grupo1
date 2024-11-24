@@ -1,27 +1,45 @@
-fetch('https://dummyjson.com/recipes/tags')
-    .then(function (response){
-        return response.json
-    })
-    .then(function(data){
+fetch("https://dummyjson.com/recipes")
+  .then(function (response) {
+    return response.json(); 
+  })
+  .then(function (data) {
+    console.log(data);
+    let especificar = data.recipes;
+    let listaRecetas = document.querySelector(".lista-recetas"); 
+    let recetasMostradas = 0; 
+    const recetasPorPagina = 10;
+
+    function cargarRecetas() {
+      let receta = "";
+      for (let i = recetasMostradas; i < recetasMostradas + recetasPorPagina; i++) {
+        if (i >= recetas.length);
+
+        receta += `
+          <article class="cadaReceta">
+            <img src=${recetas[i].image} alt="Imagen de receta"></img>
+            <h1>${recetas[i].name}</h1>
+            <p>${'📶'} ${recetas[i].difficulty}</p>
+            <a class="detalleHover" href="/recipes/${recetas[i].id}">Detalle de la receta 🍽️</a>
+          </article>
+        `;
+
         
-        let tags = data. /*que va?*/
-        let listaRecetas = document.querySelector(".lista-recetas");
-        
-        for (let i = 0; i < tags.length; i++){
-            let categorias = "";
-            categorias +=`
-                <article>
-                       <img src= ${tags[i].image} alt=''>
-                        <h1> <a href="./category.html?id=${tags[i].id}"> Name: ${tags[i].name} </a> </h1>
-                        <p>Status:${tags[i].status} </p>
-                 </article>
-            `
-        }
-        console.log(data);
-            listaRecetas.innerHTML = categorias
-    })
-    .catch(function(error){
-        console.log("error: ", error);
-        
-    })
+      }
+      listaRecetas.innerHTML += receta;
+      recetasMostradas += recetasPorPagina;
+
+      cargarMenos.innerHTML
+
+      if (recetasMostradas >= recetas.length) {
+        botonCargarMas.style.display = "none";
+      }
+    }
+    let botonCargarMas = document.querySelector(".cargar-mas");
+    botonCargarMas.addEventListener("click", cargarRecetas);
+    cargarRecetas();
+  })
+  .catch(function (error) {
+    console.log("Error:", error);
+  });
+
     
