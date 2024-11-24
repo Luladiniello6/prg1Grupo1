@@ -18,7 +18,7 @@ fetch("https://dummyjson.com/recipes")
           <article class="cadaReceta">
             <img src=${recetas[i].image} alt="Imagen de receta"></img>
             <h1>${recetas[i].name}</h1>
-            <p>${'dificultad:'} ${recetas[i].difficulty}</p>
+            <p>${'📶'} ${recetas[i].difficulty}</p>
             <a class="detalleHover" href="/recipes/${recetas[i].id}">Detalle de la receta 🍽️</a>
           </article>
         `;
