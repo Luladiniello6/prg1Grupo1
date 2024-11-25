@@ -11,11 +11,10 @@ body{
     font-weight: 100;
     font-style: normal;
     color: rgb(48, 47, 47);
-
   
   }
   
-  
+
   header {
     color: white;
     text-align: center;
@@ -173,10 +172,12 @@ font-size: x-large;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin: 30px;
+  margin-left: 35%;
+  margin-top: 50px;
+  margin-bottom: 70px;
   width: 100%;
   max-width: 400px;
-  align-content: center;
+  justify-content: space-evenly;
 
 }
 
@@ -194,10 +195,8 @@ input[type="email"], input[type="password"] {
   font-size: 14px;
 }
 
-.parte-login{
-  background-image: url('/img/fondo.webp');
-  background-repeat: no-repeat;
-  background-position: center;
+.section-login{
+ justify-items: center;
 }
 
 /* Definir clases especiales de las categories para aplicar correctamente el style*/
