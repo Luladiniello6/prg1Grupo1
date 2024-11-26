@@ -1,39 +1,30 @@
-fetch('https://dummyjson.com/recipes/tag/Pakistani')
-    .then(function(response){
+fetch(`https://dummyjson.com/recipes/tag/Pakistani`)
+    .then(function (response) {
         return response.json();
-
     })
-    .then(function(data){
-        console.log(data);
-        let recetas = data.recipes; 
-            let listaRecetas = document.querySelector(".lista-recetas");
+    .then(function (data) {
+        console.log(JSON.stringify(data, null, 4)); 
+        let recipes = data.recipes;
+        let detailContainer = document.querySelector(".recipe-detail");
 
-            if (!listaRecetas) {
-                console.error("El elemento con la clase .lista-recetas no existe.");
-                return;
-            }
+    if (!detailContainer) {
+        console.error("El elemento con la clase .recipe-detail no existe.");
+        return;
+    }
+    let contenido =""
 
-            let contenido = ""; 
-
-            for (let i = 0; i < recetas.length; i++) {
-                contenido += `
-                    <article>
-                        <img src="${recetas[i].image}" alt="${recetas[i].title}">
-                        <h1>${recetas[i].title}</h1>
-                        <p>Nivel de dificultad: ${recetas[i].difficulty}</p>
-                        <a href="./detalle.html?id=${recetas[i].id}">Ver detalle</a>
-                    </article>
-                `;
-            }
-
-            listaRecetas.innerHTML = contenido;
-
-        let tituloCategoria = document.querySelector("#category-title");
-            if (tituloCategoria) {
-                tituloCategoria.textContent = `Categoría: Pakistani`;
-            }
-    })
+    for (let i = 0; i < recipes.length; i++) { 
+        contenido +=`
+            <h1>${recipes[i].name}</h1>
+            <img src="${recipes[i].image}" alt="${recipes[i].title}" class="detail-image" />
+            <p><strong>Nivel de dificultad:</strong> ${recipes[i].difficulty}</p>
+            <p><strong>Ingredientes:</strong> ${recipes[i].ingredients.join(", ")}</p>
+            <p><strong>Preparación:</strong> ${recipes[i].instructions}</p>
+        `;
+    }
+    detailContainer.innerHTML = contenido;
+})
     .catch(function (error) {
-        console.log("Error :", error);
-    });
+        console.error("Error: ", error);
+});
 
