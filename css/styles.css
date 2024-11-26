@@ -15,10 +15,9 @@ body{
   }
   
 
-  header {
-    color: white;
-    text-align: center;
-  }
+ header{
+  padding: 0px;
+ }
   
   .cadaReceta{
     flex-wrap: wrap;
@@ -31,7 +30,7 @@ body{
   
   
   .navegar {
-    background-color: rgb(170, 32, 32);
+    background-color: rgb(186, 76, 76);
     display: flex;
     margin-top: 0px;
   }
@@ -91,7 +90,7 @@ body{
 
 .cadaReceta a{
   text-decoration: none;
-  background-color: rgb(197, 61, 61);
+  background-color: rgb(221, 88, 88);
   padding: 5px;
   border-radius: 5px;
   color: antiquewhite;
@@ -120,7 +119,7 @@ body{
 }
 
 footer{
-  background-color: rgb(170, 32, 32);
+  background-color: rgb(186, 76, 76);
   display: flex;
   padding: 20px;
   border-radius: 10px;
@@ -129,13 +128,12 @@ footer{
 
 .cargar-mas{
   display: flex;
-  background-color: rgb(163, 43, 43);
+  background-color: rgb(219, 87, 87);
   color: antiquewhite;
   padding: 20px;
   border-radius: 40px;
-  justify-content: center;
-  border-color: none;
   font-size: large;
+  border: #ccc;
 }
 
 .cargar-mas:hover{
@@ -202,7 +200,6 @@ input[type="email"], input[type="password"] {
 /* Definir clases especiales de las categories para aplicar correctamente el style*/
 header {
   background-color: #f4f4f4;
-  padding: 20px;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
