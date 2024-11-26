@@ -1,25 +1,31 @@
+let formulario = document.querySelector("form");
 
-const loginForm = document.querySelector('#loginForm');
-const emailInput = document.querySelector('.input-field[type="email"]');
-const passwordInput = document.querySelector('.input-field[type="password"]');
-const registerLink = document.querySelector('.register-link');
+let email = document.querySelector("#email");
+let password = document.querySelector("#password");
 
-loginForm.addEventListener('submit', function(event) {
-    event.preventDefault(); 
+let errorEmail = document.querySelector(".email-error");
+let errorPassword = document.querySelector(".password-error");
 
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
+let emptyErrorMessage = "El campo no puede estar vacio";
+let passwordError =  "Por favor complete el campo contraseña";
 
-    if (!email || !password) {
-        alert('Por favor, completa todos los campos.');
-    } else {
-        alert(`Bienvenido, ${email}!`);
-       
+email.addEventListener("submit", function (event) {
+    event.preventDefault();
+    erroresBool = false; 
+
+    if (email.value === "") {
+        alert(emptyErrorMessage);
+        erroresBool = true;
     }
-});
+})
 
-registerLink.addEventListener('click', function(event) {
-    if (!confirm('¿Quieres ir a la página de registro?')) {
-        event.preventDefault();
+password.addEventListener("submit", function (event) {
+    event.preventDefault();
+    erroresBool = false;
+
+    if(password.value === ""){
+       alert(passwordError);
+       erroresBool = true;
     }
-});
+    
+})

@@ -11,11 +11,10 @@ body{
     font-weight: 100;
     font-style: normal;
     color: rgb(48, 47, 47);
-
   
   }
   
-  
+
   header {
     color: white;
     text-align: center;
@@ -169,12 +168,17 @@ font-size: x-large;
 
 .container-login {
   background: #fff;
-  padding: 20px 30px;
+  padding: 100px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  margin-left: 35%;
+  margin-top: 50px;
+  margin-bottom: 70px;
   width: 100%;
   max-width: 400px;
+  justify-content: space-evenly;
+
 }
 
 .container-login h2{
@@ -184,44 +188,18 @@ font-size: x-large;
 
 input[type="email"], input[type="password"] {
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
 }
 
-.login button{
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
+.section-login{
+ justify-items: center;
 }
 
-.login button:hover{
-  background-color: #0056b3;
-}
-
-.pregunta a {
-  display: block;
-  margin-top: 10px;
-  color: #007bff;
-  text-decoration: none;
-}
-
-.pregunta a:hover {
-  text-decoration: underline;
-}
-
-.contact-method {
-  margin: 20px 0;
-}
-
-
+/* Definir clases especiales de las categories para aplicar correctamente el style*/
 header {
   background-color: #f4f4f4;
   padding: 20px;
