@@ -15,10 +15,9 @@ body{
   }
   
 
-  header {
-    color: white;
-    text-align: center;
-  }
+ header{
+  padding: 0px;
+ }
   
   .cadaReceta{
     flex-wrap: wrap;
@@ -31,7 +30,7 @@ body{
   
   
   .navegar {
-    background-color: rgb(170, 32, 32);
+    background-color: rgb(186, 76, 76);
     display: flex;
     margin-top: 0px;
   }
@@ -49,16 +48,17 @@ body{
   .navegar li {
     list-style-type: none;
     margin: 0 10px; 
-    background-color: rgba(239, 136, 136, 0.356);
-    border-radius: 5px;
-    padding: 10px;
+    background-color: rgba(71, 124, 115, 0.845);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
   }
   
   .navegar a {
     text-decoration: none;
     color: rgb(50, 49, 49);
     font-weight: bold;
-    padding: 30px;
+    padding: 20px;
   }
   
 .navegar a:hover {
@@ -91,7 +91,7 @@ body{
 
 .cadaReceta a{
   text-decoration: none;
-  background-color: rgb(197, 61, 61);
+  background-color: rgb(221, 88, 88);
   padding: 5px;
   border-radius: 5px;
   color: antiquewhite;
@@ -115,47 +115,59 @@ body{
   border-radius: 50%;
 }
 
-.buscar{
-  width: 50px;
-}
 
-footer{
-  background-color: rgb(170, 32, 32);
-  display: flex;
-  padding: 20px;
-  border-radius: 10px;
-
-}
-
-.cargar-mas{
-  display: flex;
-  background-color: rgb(163, 43, 43);
+.cargar-mas{  /* alinear el boton al medio */
+ 
+  background-color: rgb(219, 87, 87);
   color: antiquewhite;
   padding: 20px;
   border-radius: 40px;
-  justify-content: center;
-  border-color: none;
   font-size: large;
+  border: #ccc;
+  margin: 0px 50%;
 }
+
 
 .cargar-mas:hover{
   color: rgb(57, 57, 57);
 }
 
 .buscar{
-  display: flex;
   padding: 20px;
+  justify-content:center ;
+  display: flex;
 }
 
-.buscar button{
-font-size: x-large;
+.campo-buscar{
+  font-size: large;
 }
 
-.buscar input{
-  font-size: x-large;
-
+.busqueda{
+  font-size: large;
 }
 
+input[type="text"]{
+  padding: 20px;
+  border-radius: 30px;
+  width: 50%;
+  height: 15px;
+  margin-right: 10px;
+}
+
+input[type="text"]:hover{
+  border-color: #333;
+}
+
+input[type="submit"]{
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #ffffff;
+  border: solid 1px gray;
+}
+
+input[type="submit"]:hover{
+  border-color: #ccc;
+}
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -168,7 +180,7 @@ font-size: x-large;
 
 .container-login {
   background: #fff;
-  padding: 100px;
+  padding: 70px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -186,6 +198,22 @@ font-size: x-large;
   color: #333;
 }
 
+.container-login img{
+  border-radius: 50%;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.pregunta:hover{
+  color: black;
+}
+
+.pregunta{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 input[type="email"], input[type="password"] {
   width: 100%;
   padding: 20px;
@@ -193,12 +221,111 @@ input[type="email"], input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 14px;
+
 }
 
-.section-login{
- justify-items: center;
+button[type="submit"]{
+  padding: 10px;
+  font-size: large;
+  border-radius: 10px;
+  border: solid 1px white;
+}
+
+<<<<<<< HEAD
+=======
+button[type="submit"]:hover{
+  border-color: black;
+}
+
+footer{
+  background-color: #3b745eec;
+  padding: 150px;
+  margin-top: 40px;
+}
+
+.detalleReceta{
+  display: flex;
+  flex-direction: row;
+}
+
+.imagenReceta{
+  width: 90px;
+}
+
+/* pagina detalles */
+.detalles-1{
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px;
+  padding: 30px;
+
+}
+.detalles-1 h1{
+  display: flex;
+  align-items:center  ;
+}
+.detalles-1 img{
+  width: 20%;
+  border-radius: 50%;
+}
+
+.dif{
+  font-weight: bold;
+  align-content: center;
+  flex-direction: row;
+}
+
+.ins{
+
+}
+
+/* pagina categories */
+.cat{
+  padding: 20px;
+  margin: 20px;
+  background-color: #3b745eec;
+  border-radius: 20px;
+}
+
+.cat:hover{
+  background-color:  rgb(186, 76, 76);
+}
+
+.titulo-cat{
+  margin: 30px;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
 }
 
 
 
 
+/* Definir clases especiales de las categories para aplicar correctamente el style*/
+/*header {
+  background-color: #f4f4f4;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+>>>>>>> 50ceeabe50af38a32b6ee219771c44799e13a9a1
+
+
+
+<<<<<<< HEAD
+=======
+article img {
+  max-width: 100%;
+  height: auto;
+}
+
+h2 a {
+  text-decoration: none;
+  color: #333;
+}
+
+h2 a:hover {
+  text-decoration: underline;
+  color: #007BFF;
+}
+  */
+>>>>>>> 50ceeabe50af38a32b6ee219771c44799e13a9a1

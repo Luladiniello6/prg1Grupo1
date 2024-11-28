@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 fetch('https://dummyjson.com/recipes/tags')
     .then(function (response) {
         return response.json();
@@ -23,3 +24,5 @@ fetch('https://dummyjson.com/recipes/tags')
         console.error("Error: ", error);
 
     });
+=======
+>>>>>>> 50ceeabe50af38a32b6ee219771c44799e13a9a1
