@@ -21,4 +21,5 @@ fetch('https://dummyjson.com/recipes/tags')
     })
     .catch(function (error) {
         console.error("Error: ", error);
+
     });

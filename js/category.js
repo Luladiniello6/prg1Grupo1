@@ -1,36 +1,42 @@
-let qs = location.search;
-let qsObj = new URLSearchParams(qs);
-let IDreceta = qsObj.get('categoria');
+let queryString = location.search;
+let queryStringObj = new URLSearchParams(queryString);
+let id = queryStringObj.get('categoria');
+let url = `https://dummyjson.com/recipes/tag/${id}`
+let listaRecetas = document.querySelector(".recipe-detail");
 
-let detailContainer = document.querySelector(".recipe-detail");
-
-
-fetch('https://dummyjson.com/recipes/tag/${IDreceta}')
-    .then (function(response){
-        return response.json();
+    fetch(url)
+        .then (function(response){
+            return response.json();
     })
 
-    .then(function(data){
-        
-        if (!detailContainer) {
-            console.error("El elemento con la clase .recipe-detail no existe.");
-            return;
-        }
-        let contenido = "";
-        for (let recipe of data.recipes) { // Asegúrate de que 'data.recipes' sea el formato correcto
-            contenido += `
-                <h1>${recipe.name}</h1>
-                <img src="${recipe.image}" alt="${recipe.title}" class="detail-image" />
-                <p><strong>Nivel de dificultad:</strong> ${recipe.difficulty}</p>
-                <p><strong>Ingredientes:</strong> ${recipe.ingredients.join(", ")}</p>
-                <p><strong>Preparación:</strong> ${recipe.instructions}</p>
-            `;
-        }
-        detailContainer.innerHTML = contenido;
-    })
+        .then(function (data) {
+            console.log(data);
 
-    .catch(function (error) {
-        console.error("Error: ", error);
+            if (!data.recipes || data.recipes.length === 0) {
+                listaRecetas.innerHTML = `<p>No se encontraron recetas para la categoría seleccionada.</p>`;
+                return;
+            }
+
+
+            
+            let contenido = "";
+            for (let i = 0; i < data.recipes.length; i++) { // Itera sobre las recetas dentro de "data.recipes"
+                contenido += `
+                <div class="recipe-item">
+                    <img src="${data.recipes[i].image}" alt="${data.recipes[i].name}" class="recipe-image">
+                    <h2>${data.recipes[i].name}</h2>
+                    <p><strong>Dificultad:</strong> ${data.recipes[i].difficulty}</p>
+                    <a href="./recipe.html?id=${data.recipes[i].id}" class="recipe-link">Ver Detalle</a>
+                </div>
+                    `;
+        }
+
+            listaRecetas.innerHTML = contenido;
+    })
+        .catch(function (error) {
+            console.error("Error: ", error);
+            listaRecetas.innerHTML = `<p>Ocurrió un error al cargar las recetas. Intenta nuevamente más tarde.</p>`;
+
     });
 
     
