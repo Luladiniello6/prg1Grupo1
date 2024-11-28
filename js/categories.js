@@ -3,23 +3,16 @@ fetch('https://dummyjson.com/recipes/tags')
         return response.json();
     })
     .then(function (data) {
-        console.log(JSON.stringify(data,null,4))
-
-        let tags = data;
+        console.log(data);
 
         let listaRecetas = document.querySelector(".lista-recetas");
+    
+        contenido = "";
 
-        if (!listaRecetas) {
-            console.error("El elemento con la clase .lista-recetas no existe.");
-            return;
-        }
-
-        let contenido = "";
-
-        for (let i = 0; i < tags.length; i++) {
+        for (let i = 0; i < data.length; i++) {
             contenido += `
                 <article>
-                    <a href="./category.html?id=${tags[i].id}">${tags[i]}</a>
+                    <a href="./category.html?id=${data[i]}">${data[i]}</a>
                 </article>
             `
         };
