@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inconsolata:wght@200..900&family=Noto+Serif+Ahom&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <title>Detalles De Receta</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -25,14 +29,12 @@
                 </li>
             </ul>
         </nav>
-        <form class="buscar" action="./search-results.html" method="get">
-            <input type="text" name="buscador" placeholder="Escribir aquí...">
-            <button type="submit">Buscar</button>
-        </form>
+        <form class="buscar">
+            <input class="campo-buscar" type="text" value="" placeholder="Busca tu receta o ingrediente..." >
+            <input type="submit" class="material-symbols-outlined" value="Search">
     </header>
-    <main>
-        <h1 id="category-name">Detalle de la Receta</h1>
-        <section class="recipe-detail"></section>
+    <main class="detalle-recetas">
+    
     </main>
 
     <footer>

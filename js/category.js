@@ -1,30 +1,33 @@
-fetch(`https://dummyjson.com/recipes/tag/Pakistani`)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(JSON.stringify(data, null, 4)); 
-        let recipes = data.recipes;
-        let detailContainer = document.querySelector(".recipe-detail");
+fetch("https://dummyjson.com/recipes")
+  .then(function (response) {
+    return response.json(); 
+  })
+  .then(function (data) {
+    console.log(data);
 
-    if (!detailContainer) {
-        console.error("El elemento con la clase .recipe-detail no existe.");
-        return;
-    }
-    let contenido =""
+    let detalles = data.recipes;
+    let listaDetalles = document.querySelector(".detalle-recetas");
 
-    for (let i = 0; i < recipes.length; i++) { 
-        contenido +=`
-            <h1>${recipes[i].name}</h1>
-            <img src="${recipes[i].image}" alt="${recipes[i].title}" class="detail-image" />
-            <p><strong>Nivel de dificultad:</strong> ${recipes[i].difficulty}</p>
-            <p><strong>Ingredientes:</strong> ${recipes[i].ingredients.join(", ")}</p>
-            <p><strong>Preparación:</strong> ${recipes[i].instructions}</p>
+    if (detalles && detalles.length > 0) {
+      let detalle = "";
+      for (let i = 0; i < detalles.length; i++) {
+        detalle +=`
+          <article class="detalles-1">
+            <h1>${detalles[i].name}</h1>
+            <img src="${detalles[i].image}" alt="Imagen de receta">
+            <p class="dif">Nivel de dificultad: ${detalles[i].difficulty}</p>
+            <p class="ing">Ingredientes: ${detalles[i].ingredients.join(", ")}</p>
+            <p class="ins">Instrucciones de preparación: ${detalles[i].instructions}</p>
+          </article>
         `;
+      }
+      listaDetalles.innerHTML = detalle;
+    } else {
+      console.log("No se encontraron recetas.");
     }
-    detailContainer.innerHTML = contenido;
-})
+  })
     .catch(function (error) {
-        console.error("Error: ", error);
-});
+        console.log("Error:", error);
+    });
+
 
