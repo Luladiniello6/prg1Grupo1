@@ -116,7 +116,7 @@ body{
 }
 
 
-.cargar-mas{  /* alinear el boton al medio */
+.cargar-mas{ 
  
   background-color: rgb(219, 87, 87);
   color: antiquewhite;
@@ -124,7 +124,7 @@ body{
   border-radius: 40px;
   font-size: large;
   border: #ccc;
-  margin: 0px 50%;
+ 
 }
 
 
@@ -214,7 +214,7 @@ input[type="submit"]:hover{
   margin-top: 20px;
 }
 
-input[type="email"], input[type="password"] {
+input[type="email"], input[type="password"], input[type="nombre"], input[type="apellido"], input[type="telefono"], input[type="rePassword"]{
   width: 100%;
   padding: 20px;
   margin: 10px 0;
@@ -231,101 +231,39 @@ button[type="submit"]{
   border: solid 1px white;
 }
 
-<<<<<<< HEAD
-=======
-button[type="submit"]:hover{
-  border-color: black;
-}
-
-footer{
-  background-color: #3b745eec;
-  padding: 150px;
-  margin-top: 40px;
-}
-
-.detalleReceta{
-  display: flex;
-  flex-direction: row;
-}
-
-.imagenReceta{
-  width: 90px;
-}
-
-/* pagina detalles */
-.detalles-1{
-  display: flex;
-  flex-direction: row;
-  margin: 20px 0px;
-  padding: 30px;
-
-}
-.detalles-1 h1{
-  display: flex;
-  align-items:center  ;
-}
-.detalles-1 img{
-  width: 20%;
-  border-radius: 50%;
-}
-
-.dif{
-  font-weight: bold;
-  align-content: center;
-  flex-direction: row;
-}
-
-.ins{
-
-}
-
-/* pagina categories */
-.cat{
-  padding: 20px;
-  margin: 20px;
-  background-color: #3b745eec;
-  border-radius: 20px;
-}
-
-.cat:hover{
-  background-color:  rgb(186, 76, 76);
-}
-
-.titulo-cat{
-  margin: 30px;
-  font-size: 70px;
+.cargar-button{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 
-
-
-/* Definir clases especiales de las categories para aplicar correctamente el style*/
-/*header {
-  background-color: #f4f4f4;
+.container-registro {
+  background: #fff;
+  padding: 70px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  border-bottom: 1px solid #ddd;
-}
->>>>>>> 50ceeabe50af38a32b6ee219771c44799e13a9a1
+  margin-left: 35%;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  width: 100%;
+  max-width: 400px;
+  justify-content: space-evenly;
 
-
-
-<<<<<<< HEAD
-=======
-article img {
-  max-width: 100%;
-  height: auto;
 }
 
-h2 a {
-  text-decoration: none;
+.container-registro h2{
+  margin-bottom: 20px;
   color: #333;
 }
 
-h2 a:hover {
-  text-decoration: underline;
-  color: #007BFF;
+.container-registro img{
+  border-radius: 50%;
+  width: 60%;
+  margin-bottom: 20px;
 }
-  */
->>>>>>> 50ceeabe50af38a32b6ee219771c44799e13a9a1
+
+.terms{
+  margin: 10px 0px;
+}
