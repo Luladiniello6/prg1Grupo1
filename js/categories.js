@@ -1,40 +1,25 @@
-const categoriasSection = document.querySelector(".categorias");
-const URL = 'https://dummyjson.com/recipes/tags';
-
-let categoriaPlus = "";
-
-fetch(URL)
+fetch('https://dummyjson.com/recipes/tags')
     .then(function (response) {
-        if (!response.ok) throw new Error("Error al conectar con la API");
         return response.json();
     })
-    .then(function (tags) {
-        console.log("Categorías recibidas:", tags);
+    .then(function (data) {
+        console.log(data);
 
-        tags.forEach(function (tag) {
-            for (let i in tags) {
-                const tag = tags[i]; 
-                categoriaPlus += `
-                    <article class="category">
-                        <a href="./category.html?tag=${tag}" class="category-link">${tag}</a>
-                    </article>
-                `;
-            }
-        });
+        let listaRecetas = document.querySelector(".categorias");
+    
+        contenido = "";
 
-        categoriasSection.innerHTML = categoriaPlus;
-
-        const categoryElements = document.querySelectorAll(".category-link");
-        categoryElements.forEach(function (category) {
-            category.addEventListener("mouseover", function () {
-                category.style.textDecoration = "underline";
-            });
-            category.addEventListener("mouseout", function () {
-                category.style.textDecoration = "none";
-            });
-        });
+        for (let i = 0; i < data.length; i++) {
+            contenido += `
+                <article>
+                    <a href="./category.html?category-recipe=${data[i]}">${data[i]}</a>
+                </article>
+            `
+        };
+    
+        listaRecetas.innerHTML = contenido;
     })
     .catch(function (error) {
-        console.error("Error al obtener las categorías:", error);
-        categoriasSection.innerHTML = "<p>Error al cargar las categorías. Intenta más tarde.</p>";
+        console.error("Error: ", error);
     });
+

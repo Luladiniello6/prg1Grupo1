@@ -13,9 +13,10 @@
 <body>
     <header>
         <img class="logo" src="./img/logo.jpg" alt="">
-        <form class="buscar">
-            <input class="campo-buscar" type="text" value="" placeholder="Busca tu receta o ingrediente..." >
-            <input type="submit" class="material-symbols-outlined" value="Search">
+        <form action="search-results.html" method="get" class="buscar">
+            <input id="busqueda" name="buscador" placeholder="Busca tu receta o ingrediente..." >
+            <button id="enviar" type="submit" class="material-symbols-outlined" value="Search"> Buscar</button>
+        </form>
         <nav class="navegar">
             <ul>
                 <li>
