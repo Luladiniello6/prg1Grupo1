@@ -1,31 +1,36 @@
-let formulario = document.querySelector("form");
+let formulario = document.querySelector("#form");
 
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");
 
-let errorEmail = document.querySelector(".email-error");
-let errorPassword = document.querySelector(".password-error");
+/* NO VA PORQUE ME PIDE MOSTRAR LOS ERRORES MEDIANTE ALERTS, ESTO SE USA CUANDO LO DEBO MOSTRAR A TRAVES DE DIVS
+let errorEmail = document.querySelector(".email");
+let errorPassword = document.querySelector(".password");
+*/
 
-let emptyErrorMessage = "El campo no puede estar vacio";
-let passwordError =  "Por favor complete el campo contraseña";
+let emptyEmail = "Por favor complete el campo email";
+let emptyPassword = "Por favor complete el campo contraseña";
 
-email.addEventListener("submit", function (event) {
+
+let validacion = true;
+formulario.addEventListener("submit", function (event) {
     event.preventDefault();
-    erroresBool = false; 
-
-    if (email.value === "") {
-        alert(emptyErrorMessage);
-        erroresBool = true;
+    if (email.value == "") {
+        alert(emptyEmail)
+        validacion = false;
     }
-})
-
-password.addEventListener("submit", function (event) {
-    event.preventDefault();
-    erroresBool = false;
-
-    if(password.value === ""){
-       alert(passwordError);
-       erroresBool = true;
+    if (password.value == "") {
+        alert(emptyPassword) 
+        validacion = false;
     }
+    if (validacion == true) {
+        this.submit();
+    }
+     
     
 })
+      
+
+
+  
+  

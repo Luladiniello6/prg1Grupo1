@@ -5,9 +5,11 @@ fetch('https://dummyjson.com/recipes/tags')
     .then(function (data) {
         console.log(data);
 
+
         let listaRecetas = document.querySelector(".lista-recetas");
-    
+   
         contenido = "";
+
 
         for (let i = 0; i < data.length; i++) {
             contenido += `
@@ -22,5 +24,7 @@ fetch('https://dummyjson.com/recipes/tags')
     .catch(function (error) {
         console.error("Error: ", error);
 
+
     });
+
 
