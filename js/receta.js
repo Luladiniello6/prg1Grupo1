@@ -24,8 +24,8 @@ fetch(`https://dummyjson.com/recipes/${recetaId}`)
         tiempoCoccion.innerText = `Tiempo_de_coccion: ${receta.prepTimeMinutes}`;
         foto.src = receta.image;
 
-        if (data.tags && data.length > 0){
-            categorias.innerHTML = `Categorias: ${data.join(",")}`;
+        if (receta.tags && receta.tags.length > 0){
+            categorias.innerHTML = `Categorias: ${receta.tags.join(",")}`;
         } else {
             categorias.innerHTML = "Categoria: no especificada";
         }
