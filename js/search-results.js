@@ -1,35 +1,36 @@
-let params = new URLSearchParams(window.location.search);
-let query = params.get("buscador");
-console.log("query:", query);
+let queryString = location.search;
+let queryStringObj = new URLSearchParams(queryString);
+let resultado = queryStringObj.get('buscador');
+console.log("resultado: ", resultado);
 
+let url = `https://dummyjson.com/recipes/search?q=${resultado}`;
+console.log("url: ", url);
 
-document.getElementById("titulo-resultados").textContent = `Resultados de búsqueda para: "${query}"`;
+let listaRecetas = document.querySelector(".resultados");
 
-fetch(`https://dummyjson.com/recipes/search?q=${query}`)
-    .then(function(response){
-        return response.json();
-    })
+let tituloBuscador = document.querySelector("#titulo-resultados");
 
-    .then(function(data){
-        console.log(data);
+tituloBuscador.innerText = `Resultados de búsqueda para: ${resultado}`;
+
+    fetch(url)
+        .then(function(response){
+            return response.json();
+        })
+        .then(function(data){
+            let recetas = data.recipes;
+            let contenido ="";
         
-    })
-        let resultados = document.getElementById("resultados");
-        if (data.recipes.length === 0) {
-            resultados.textContent = "No se encontraron resultados.";
-        } else {
-            data.recipes.forEach(receta => {
-                let recetaHTML = `
-                    <div class="receta">
-                        <img src="https://via.placeholder.com/200" alt="${receta.title}">
-                        <h3>${receta.title}</h3>
-                        <a href="receta.html?id=${receta.id}">Ver receta</a>
-                    </div>
-                `;
-                resultados.innerHTML += recetaHTML;
-            });
-        }
-    .catch (function(error){
-        console.log("Error: ", errror);
-        
-    })
+            for (let i = 0; i< recetas.length; i++){
+                contenido +=`
+                    <article>
+                        <img src="${recetas[i].image}" alt="${recetas[i].name}" style="width:100%;">
+                        <h1>${recetas[i].name}</h1>
+                        <button><a href="receta.html?id=${recetas[i].id}>VER</a><button>
+                    </article>
+                `
+            }
+            listaRecetas.innerHTML= contenido;
+        })
+        .catch(function(error){
+            console.log("error: ", error);
+        })
