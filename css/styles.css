@@ -267,3 +267,79 @@ button[type="submit"]{
 .terms{
   margin: 10px 0px;
 }
+
+button[type="submit"]:hover{
+  border-color: black;
+}
+
+
+footer{
+  background-color: #3b745eec;
+  padding: 150px;
+  margin-top: 40px;
+}
+
+
+.detalleReceta{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.imagenReceta{
+  width: 90px;
+}
+
+
+/* pagina detalles */
+.detalles-1{
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0px;
+  padding: 30px;
+
+
+}
+.detalles-1 h1{
+  display: flex;
+  align-items:center  ;
+}
+.detalles-1 img{
+  width: 20%;
+  border-radius: 50%;
+}
+
+
+.dif{
+  font-weight: bold;
+  align-content: center;
+  flex-direction: row;
+}
+
+
+.ins{
+
+
+}
+
+
+/* pagina categories */
+.cat{
+  padding: 20px;
+  margin: 20px;
+  background-color: #3b745eec;
+  border-radius: 20px;
+}
+
+
+.cat:hover{
+  background-color:  rgb(186, 76, 76);
+}
+
+
+.titulo-cat{
+  margin: 30px;
+  font-size: 70px;
+  display: flex;
+  justify-content: center;
+}
