@@ -1,4 +1,4 @@
-let formulario = document.querySelector("#form");
+let formulario = document.querySelector(".formLogin");
 
 let email = document.querySelector("#email");
 let password = document.querySelector("#password");

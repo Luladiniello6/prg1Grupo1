@@ -138,11 +138,7 @@ body{
   display: flex;
 }
 
-.campo-buscar{
-  font-size: large;
-}
-
-.busqueda{
+#busqueda{
   font-size: large;
 }
 
