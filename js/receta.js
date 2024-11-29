@@ -1,13 +1,37 @@
-const params = new URLSearchParams(window.location.search);
-const recetaId = params.get("id");
+let queryString = location.search;
+let queryStringObj = new URLSearchParams(queryString);
+let recetaId = queryStringObj.get('recetaId');
+console.log("receta id: ",recetaId);
 
 fetch(`https://dummyjson.com/recipes/${recetaId}`)
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("nombre-receta").textContent = data.title;
-        document.getElementById("imagen-receta").src = "https://via.placeholder.com/400";
-        document.getElementById("instrucciones").textContent = data.instructions || "No hay instrucciones disponibles.";
-        document.getElementById("tiempo-coccion").textContent = `Tiempo de cocción: ${data.cookingTime || "No especificado"}`;
+    .then(function(response){
+        return response.json();
     })
-    .catch(error => console.error("Error al cargar la receta:", error));
+
+    .then(function(data){
+        console.log(data);
+        
+        let receta = data;
+
+        let nombre = document.querySelector(".nombre-receta");
+        let instrucciones = document.querySelector(".instrucciones");
+        let tiempoCoccion = document.querySelector(".tiempo-coccion");
+        let foto = document.querySelector(".imagen-receta");
+        let categorias = document.querySelector(".categoria");
+
+        nombre.innerText = `${receta.name}`;
+        instrucciones.innerText = `Instrucciones: ${receta.instructions}`;
+        tiempoCoccion.innerText = `Tiempo_de_coccion: ${receta.prepTimeMinutes}`;
+        foto.src = receta.image;
+
+        if (data.tags && data.length > 0){
+            categorias.innerHTML = `Categorias: ${data.join(",")}`;
+        } else {
+            categorias.innerHTML = "Categoria: no especificada";
+        }
+        
+    })
+    .catch(function(error){
+        console.log("error: ", error);
+    })
 
