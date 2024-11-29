@@ -33,19 +33,24 @@
         <form class="buscar">
             <input class="campo-buscar" type="text" value="" placeholder="Busca tu receta o ingrediente..." >
             <input type="submit" class="material-symbols-outlined" value="Search">
+        </form>
     </header>
 
     <main class="container-registro">
         <img src="./img/logo.jpg">
         <h2>Hacete parte del club</h2>
         <form class="form-registro">
-            <input class="nombre" type="nombre" placeholder="Ingrese su nombre...">
-            <input class="apellido" type="apellido" placeholder="Ingrese su apellido...">
-            <input class="telefono" type="telefono" placeholder="Ingrese su número de teléfono">
-            <input class="email" type="email" placeholder="Ingresá tu email">
-            <input clas="password" type="password" placeholder="Contraseña">
-            <input class="rePassword" type="password" placeholder="Confirme su contraseña">
-            <button class="registro" type="submit">Registrate</button>
+            <input id="nombre" class="nombre" type="nombre" placeholder="Ingrese su nombre y apellido...">
+            <div class="divNombre"></div>
+            <input id="email" class="email" type="email" placeholder="Ingresá tu email">
+            <div class="divEmail"></div>
+            <input id="password" class="password" type="password" placeholder="Contraseña">
+            <div class="divPass"></div>
+            <div class="terms">
+                <label for="terminos">Acepto los términos y condiciones</label>
+                <input type="checkbox" name="terminos" value="Terminos y condiciones">
+            </div>
+            <button id="registro" class="registro" type="submit">Registrate</button>
             <a class="pregunta" href="./login.html">Ya tengo cuenta</a>
         </form>
 
