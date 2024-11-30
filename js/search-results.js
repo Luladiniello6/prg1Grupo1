@@ -22,8 +22,8 @@ tituloBuscador.innerText = `Resultados de búsqueda para: ${resultado}`;
         
             for (let i = 0; i< recetas.length; i++){
                 contenido +=`
-                    <article>
-                        <img src="${recetas[i].image}" alt="${recetas[i].name}" style="width:100%;">
+                    <article class="search">
+                        <img class="imgBuscada" src="${recetas[i].image}" alt="${recetas[i].name}>
                         <h1>${recetas[i].name}</h1>
                         <button><a href="receta.html?id=${recetas[i].id}>VER</a><button>
                     </article>

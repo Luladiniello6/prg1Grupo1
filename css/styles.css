@@ -221,6 +221,11 @@ footer{
   background-color: #3b745eec;
   padding: 150px;
   margin-top: 40px;
+  
+}
+
+footer p{
+  font-size: larger;
 }
 
 
@@ -348,9 +353,78 @@ footer{
   width: fit-content;
 }
 
-.categoria{
-  font-weight: bold;
-  align-content: center;
-  flex-direction: row;
-  font-size: large;
+.imgBuscada{
+  width: 40%;
+  border-radius: 50%;
+  margin: 30px;
 }
+
+#titulo-resultados{
+  margin-left: 20px;
+}
+
+
+@media (min-width: 1025px) {
+  .lista-recetas {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cadaReceta {
+    width: 22%;
+  }
+
+  .banner {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .container-login, .container-registro {
+    margin-left: 30%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navegar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navegar li {
+    margin: 10px 0;
+    width: 100%; 
+    justify-content: center;
+  }
+
+  .cadaReceta {
+    width: 90%; 
+    margin: 10px auto;
+  }
+
+  .container-login, .container-registro {
+    margin: 20px auto;
+    max-width: 90%; 
+  }
+
+  .imagen-receta, .cadaReceta img {
+    width: 70%; 
+  }
+
+  footer {
+    padding: 50px;
+  }
+
+  .categorias {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cat {
+    width: 90%; 
+    text-align: center;
+  }
+}
+
