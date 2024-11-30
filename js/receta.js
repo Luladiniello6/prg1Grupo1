@@ -29,6 +29,8 @@ fetch(`https://dummyjson.com/recipes/${recetaId}`)
         } else {
             categorias.innerHTML = "Categoria: no especificada";
         }
+
+
         
     })
     .catch(function(error){

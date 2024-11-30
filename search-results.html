@@ -13,10 +13,6 @@
 <body>
     <header>
         <img class="logo" src="./img/logo.jpg" alt="">
-        <form action="search-results.html" method="get" class="buscar">
-            <input id="busqueda" type="text" name="buscador" placeholder="Busca tu receta o ingrediente..." >
-            <button id="enviar" type="submit" class="material-symbols-outlined" value="Search"> Buscar</button>
-        </form>
         <nav class="navegar">
             <ul>
                 <li>
@@ -34,6 +30,10 @@
             </ul>
         </nav>
     </header>
+    <form action="search-results.html" method="get" class="buscar">
+        <input id="busqueda" type="text" name="buscador" placeholder="Busca tu receta o ingrediente..." >
+        <button id="enviar" type="submit" class="material-symbols-outlined" value="Search"> Buscar</button>
+    </form>
     <main>
         <h1 id="titulo-resultados"></h1>
         <section class="resultados"></section>

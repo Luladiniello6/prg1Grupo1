@@ -15,10 +15,10 @@ let listaRecetas = document.querySelector(".lista-recetas");
             for (let i = 0; i < data.recipes.length; i++) { // Itera sobre las recetas dentro de "data.recipes"
                 contenido += `
                 <div class="recipe-item">
-                    <img src="${data.recipes[i].image}" alt="${data.recipes[i].name}" class="recipe-image">
                     <h2>${data.recipes[i].name}</h2>
-                    <p><strong>Dificultad:</strong> ${data.recipes[i].difficulty}</p>
-                    <a href="./recipe.html?id=${data.recipes[i].id}" class="recipe-link">Ver Detalle</a>
+                    <img src="${data.recipes[i].image}" alt="${data.recipes[i].name}" class="recipe-image">
+                    <p class="difi" ><strong>Dificultad:</strong> ${data.recipes[i].difficulty}</p>
+                    <a href="./receta.html?id=${data.recipes[i].id}" class="recipe-link">Ver Detalle</a>
                 </div>
                     `;
             }
